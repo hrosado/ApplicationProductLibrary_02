@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\WebGrease.dll
-=======
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\Apl_Mvc_App.dll.config
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\Apl_Mvc_App.dll
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\Apl_Mvc_App.pdb
@@ -59,6 +56,8 @@ C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\Newtonsoft.Json.dll
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\PagedList.dll
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\PagedList.Mvc.dll
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\System.Web.Helpers.dll
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\System.Web.Mvc.dll
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\System.Web.Optimization.dll
@@ -69,6 +68,8 @@ C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\WebGrease.dll
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\EntityFramework.xml
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\EntityFramework.SqlServer.xml
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\PagedList.xml
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\PagedList.Mvc.xml
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\System.Web.Helpers.xml
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\System.Web.Mvc.xml
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\System.Web.Optimization.xml
@@ -83,5 +84,3 @@ C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\obj
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.csproj.CopyComplete
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.dll
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.pdb
-C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.csproj.AssemblyReference.cache
->>>>>>> 5a6463add731adde589ab77b0ddf06b01edbf50f
