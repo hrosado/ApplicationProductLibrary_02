@@ -1,0 +1,10 @@
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\bin\Debug\Apl_Console_App.exe.config
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\bin\Debug\Apl_Console_App.exe
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\bin\Debug\Apl_Console_App.pdb
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\bin\Debug\Newtonsoft.Json.dll
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\bin\Debug\Newtonsoft.Json.xml
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\obj\Debug\Apl_Console_App.csproj.AssemblyReference.cache
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\obj\Debug\Apl_Console_App.csproj.CoreCompileInputs.cache
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\obj\Debug\Apl_Console_App.csproj.CopyComplete
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\obj\Debug\Apl_Console_App.exe
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\obj\Debug\Apl_Console_App.pdb
