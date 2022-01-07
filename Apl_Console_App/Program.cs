@@ -27,14 +27,19 @@ namespace Apl_Console_App
             // rootPath directory to index
             // Homeroot
             string rootPath = @"C:\Users\CW2_Rosado\Documents\Repos\OEWIO2021\Content\OEWIO_PDFs\TestDir";
-
+            string writeToPath = @"C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\Data\files.csv";
             // Remoteroot
             //string rootPath = @"\\hqcuilms.area52.afnoapps.usaf.mil\E\DLL_Reengineering\Dependencies_x64_Release\";
 
             bool directoryExists = Directory.Exists(rootPath);
+            bool fileExist = File.Exists(writeToPath);
 
             if (directoryExists)
             {
+                if (fileExist)
+                {
+                    File.Delete(writeToPath);
+                }
                 Console.WriteLine("The directory exists.");
                 string[] files = Directory.GetFiles(rootPath, "*.*", SearchOption.TopDirectoryOnly);
                 List<string> fileItems = new List<string>();
@@ -60,14 +65,16 @@ namespace Apl_Console_App
 
                     list.Add(newFileItem);
 
+                    File.AppendAllText(writeToPath, $"{ newFileItem.Id},{  newFileItem.FileName },{ newFileItem.TimeStamp },{ newFileItem.FileSize } " + Environment.NewLine);
+
                 }
                 foreach (var li in list)
                 {
                     Console.WriteLine($"{ li.Id},{  li.FileName },{ li.TimeStamp },{ li.FileSize } ");
                 }
-                string strResultJson = JsonConvert.SerializeObject(list, Formatting.Indented);
+                //string strResultJson = JsonConvert.SerializeObject(list, Formatting.Indented);
                 // Location to write JSON to
-                File.WriteAllText(@"C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\Data\files.json", strResultJson);
+                //File.WriteAllText(@"C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\Data\files.csv", list);
 
             }
             else
