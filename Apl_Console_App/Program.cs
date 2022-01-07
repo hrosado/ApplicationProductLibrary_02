@@ -52,6 +52,7 @@ namespace Apl_Console_App
 
                 var list = new List<FileItems>();
                 int count = 0;
+                File.AppendAllText(writeToPath, $"{ "Id"},{  "FileName" },{ "TimeStamp"},{ "FileSize" } " + Environment.NewLine);
                 foreach (var line in fileItems)
                 {
                     string[] entries = line.Split(',');
