@@ -84,3 +84,4 @@ C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\obj
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.csproj.CopyComplete
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.dll
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.pdb
+C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.csproj.AssemblyReference.cache

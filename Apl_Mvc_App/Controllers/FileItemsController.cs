@@ -58,7 +58,7 @@ namespace Apl_Mvc_App.Controllers
             }
 
 
-            int pageSize = 3;
+            int pageSize = 10;
             int pageNumber = (page ?? 1);
             return View(fileItems.ToPagedList(pageNumber, pageSize));
             //return View(fileItems.ToList());
