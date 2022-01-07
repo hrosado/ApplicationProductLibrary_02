@@ -26,15 +26,16 @@ namespace Apl_Console_App
         {
             // rootPath directory to index
             // Homeroot
-            string rootPath = @"C:\Users\CW2_Rosado\Documents\Repos\OEWIO2021\Content\OEWIO_PDFs\TestDir";
+            //string rootPath = @"C:\Users\CW2_Rosado\Documents\Repos\OEWIO2021\Content\OEWIO_PDFs\TestDir";
 
             // Remoteroot
-            //string rootPath = @"\\hqcuilms.area52.afnoapps.usaf.mil\E\DLL_Reengineering\Dependencies_x64_Release\";
+            string rootPath = @"\\hqcuilms\E\202111_LMS_Contents_Folder_Backup\date_only_certificates";
 
             bool directoryExists = Directory.Exists(rootPath);
 
             if (directoryExists)
             {
+                int ReadCount = 0;
                 Console.WriteLine("The directory exists.");
                 string[] files = Directory.GetFiles(rootPath, "*.*", SearchOption.TopDirectoryOnly);
                 List<string> fileItems = new List<string>();
@@ -42,18 +43,21 @@ namespace Apl_Console_App
                 {
                     var info = new FileInfo(file);
                     fileItems.Add(($"{ Path.GetFileName(file) },{ info.LastWriteTime },{info.Length } bytes"));
+                    ReadCount++;
+
                 }
 
                 var list = new List<FileItems>();
-                int count = 0;
+                int writeCount = 0;
                 foreach (var line in fileItems)
                 {
+                    Console.WriteLine("Writing files ... " + writeCount);
                     string[] entries = line.Split(',');
                     FileItems newFileItem = new FileItems();
 
-                    count++;
+                    writeCount++;
 
-                    newFileItem.Id = count;
+                    newFileItem.Id = writeCount;
                     newFileItem.FileName = entries[0];
                     newFileItem.TimeStamp = Convert.ToDateTime(entries[1]);
                     newFileItem.FileSize = entries[2];
@@ -67,7 +71,8 @@ namespace Apl_Console_App
                 }
                 string strResultJson = JsonConvert.SerializeObject(list, Formatting.Indented);
                 // Location to write JSON to
-                File.WriteAllText(@"C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\Data\files.json", strResultJson);
+                //File.WriteAllText(@"C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\Data\files.json", strResultJson);
+                File.WriteAllText(@"C:\Users\1260021520E\Documents\09_APL\ApplicationProductLibrary_02\Apl_Console_App\Data\files.json", strResultJson);
 
             }
             else
