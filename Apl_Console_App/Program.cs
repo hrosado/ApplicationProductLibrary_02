@@ -26,10 +26,11 @@ namespace Apl_Console_App
         {
             // rootPath directory to index
             // Homeroot
-            string rootPath = @"C:\Users\CW2_Rosado\Documents\Repos\OEWIO2021\Content\OEWIO_PDFs\TestDir";
-            string writeToPath = @"C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\Data\files.csv";
+            //string rootPath = @"C:\Users\CW2_Rosado\Documents\Repos\OEWIO2021\Content\OEWIO_PDFs\TestDir";
+            //string writeToPath = @"C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\Data\files.csv";
             // Remoteroot
-            //string rootPath = @"\\hqcuilms.area52.afnoapps.usaf.mil\E\DLL_Reengineering\Dependencies_x64_Release\";
+            string rootPath = @"\\hqcuilms.area52.afnoapps.usaf.mil\E\DLL_Reengineering\Dependencies_x64_Release\";
+            string writeToPath = @"C:\Users\1260021520E\Documents\09_APL\ApplicationProductLibrary_02\Apl_Console_App\Data\files.csv";
 
             bool directoryExists = Directory.Exists(rootPath);
             bool fileExist = File.Exists(writeToPath);
