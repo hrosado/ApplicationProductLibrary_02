@@ -154,12 +154,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AplDBModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\AplDbModel_.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AplDbModel_.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AplDbModel_.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AplDbModel_.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AplDbModel_.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AplDbModel_.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\APLFileItem.cs">
-      <DependentUpon>AplDBModel.tt</DependentUpon>
+      <DependentUpon>AplDbModel_.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\AplDb.mdf" />
+    <Content Include="App_Data\AplDb_log.ldf">
+      <DependentUpon>AplDb.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -179,6 +198,16 @@
       <DependentUpon>AplDBModel.edmx</DependentUpon>
       <LastGenOutput>AplDBModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\AplDbModel_.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AplDbModel_.edmx</DependentUpon>
+      <LastGenOutput>AplDbModel_.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AplDbModel_.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AplDbModel_.edmx</DependentUpon>
+      <LastGenOutput>AplDbModel_.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\AplDBModel.edmx">
@@ -187,6 +216,13 @@
     </EntityDeploy>
     <Content Include="Models\AplDBModel.edmx.diagram">
       <DependentUpon>AplDBModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\AplDbModel_.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AplDbModel_.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AplDbModel_.edmx.diagram">
+      <DependentUpon>AplDbModel_.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -219,9 +255,7 @@
     <Content Include="Views\FileItems\Edit.cshtml" />
     <Content Include="Views\FileItems\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
