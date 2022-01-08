@@ -12,7 +12,7 @@ namespace Apl_Mvc_App.Controllers
 {
     public class FileItemsController : Controller
     {
-        private AplDbEntities db = new AplDbEntities();
+        private AplDbEntities_ db = new AplDbEntities_();
 
         // GET: FileItems
         public ActionResult Index()
