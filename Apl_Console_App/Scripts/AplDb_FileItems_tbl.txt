@@ -1,0 +1,17 @@
+USE [AplDb]
+GO
+
+/****** Object:  Table [dbo].[APLFileItems]    Script Date: 1/8/2022 10:29:50 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[APLFileItems](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[FileName] [nvarchar](300) NOT NULL,
+	[TimeStamp] [datetime] NOT NULL,
+	[FileSize] [nvarchar](50) NOT NULL
+) ON [PRIMARY]
+GO
