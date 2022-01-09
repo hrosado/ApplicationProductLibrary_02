@@ -176,6 +176,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\AplDb.mdf" />
+    <Content Include="App_Data\AplDb_Local.mdf" />
+    <Content Include="App_Data\AplDb_Local_log.ldf">
+      <DependentUpon>AplDb_Local.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\AplDb_log.ldf">
       <DependentUpon>AplDb.mdf</DependentUpon>
     </Content>

@@ -166,8 +166,7 @@ C:\Users\1260021520E\Documents\09_APL\ApplicationProductLibrary_02\Apl_Mvc_App\b
 C:\Users\1260021520E\Documents\09_APL\ApplicationProductLibrary_02\Apl_Mvc_App\bin\Newtonsoft.Json.xml
 C:\Users\1260021520E\Documents\09_APL\ApplicationProductLibrary_02\Apl_Mvc_App\bin\Antlr3.Runtime.pdb
 C:\Users\1260021520E\Documents\09_APL\ApplicationProductLibrary_02\Apl_Mvc_App\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\1260021520E\Documents\09_APL\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.csproj.AssemblyReference.cache
 C:\Users\1260021520E\Documents\09_APL\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.csproj.CoreCompileInputs.cache
-C:\Users\1260021520E\Documents\09_APL\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.csproj.CopyComplete
 C:\Users\1260021520E\Documents\09_APL\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.dll
 C:\Users\1260021520E\Documents\09_APL\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.pdb
+C:\Users\1260021520E\Documents\09_APL\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.csproj.AssemblyReference.cache

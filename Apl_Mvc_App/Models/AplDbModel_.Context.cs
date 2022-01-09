@@ -13,10 +13,10 @@ namespace Apl_Mvc_App.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AplDbEntities_ : DbContext
+    public partial class AplDb_LocalEntities_ : DbContext
     {
-        public AplDbEntities_()
-            : base("name=AplDbEntities_")
+        public AplDb_LocalEntities_()
+            : base("name=AplDb_LocalEntities_")
         {
         }
     
