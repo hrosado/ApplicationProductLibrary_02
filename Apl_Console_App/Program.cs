@@ -29,10 +29,15 @@ namespace Apl_Console_App
             //string rootPath = @"C:\Users\CW2_Rosado\Documents\Repos\OEWIO2021\Content\OEWIO_PDFs\TestDir";
 
             // Remoteroot
+<<<<<<< HEAD
             string rootPath = @"\\hqcuilms\E\202111_LMS_Contents_Folder_Backup\date_only_certificates";
+=======
+            // string rootPath = @"\\hqcuilms.area52.afnoapps.usaf.mil\E\DLL_Reengineering\Dependencies_x64_Release\";
+            string rootPath = @"\\hqcuilms.area52.afnoapps.usaf.mil\E\202111_LMS_Contents_Folder_Backup\Test_db\";
+>>>>>>> feature/Mvc_Pagination
 
             bool directoryExists = Directory.Exists(rootPath);
-
+            int readCount = 0;
             if (directoryExists)
             {
                 int ReadCount = 0;
@@ -41,6 +46,8 @@ namespace Apl_Console_App
                 List<string> fileItems = new List<string>();
                 foreach (var file in files)
                 {
+                    readCount++;
+                    Console.WriteLine("Reading files ..." + readCount);
                     var info = new FileInfo(file);
                     fileItems.Add(($"{ Path.GetFileName(file) },{ info.LastWriteTime },{info.Length } bytes"));
                     ReadCount++;
@@ -51,12 +58,20 @@ namespace Apl_Console_App
                 int writeCount = 0;
                 foreach (var line in fileItems)
                 {
+<<<<<<< HEAD
                     Console.WriteLine("Writing files ... " + writeCount);
+=======
+
+>>>>>>> feature/Mvc_Pagination
                     string[] entries = line.Split(',');
                     FileItems newFileItem = new FileItems();
 
                     writeCount++;
+<<<<<<< HEAD
 
+=======
+                    Console.WriteLine("Writing files ..." + writeCount);
+>>>>>>> feature/Mvc_Pagination
                     newFileItem.Id = writeCount;
                     newFileItem.FileName = entries[0];
                     newFileItem.TimeStamp = Convert.ToDateTime(entries[1]);
@@ -71,7 +86,12 @@ namespace Apl_Console_App
                 }
                 string strResultJson = JsonConvert.SerializeObject(list, Formatting.Indented);
                 // Location to write JSON to
+<<<<<<< HEAD
                 //File.WriteAllText(@"C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\Data\files.json", strResultJson);
+=======
+                // File.WriteAllText(@"C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Console_App\Data\files.json", strResultJson);
+                // Work to write JSON to
+>>>>>>> feature/Mvc_Pagination
                 File.WriteAllText(@"C:\Users\1260021520E\Documents\09_APL\ApplicationProductLibrary_02\Apl_Console_App\Data\files.json", strResultJson);
 
             }

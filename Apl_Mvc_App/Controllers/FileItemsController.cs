@@ -7,17 +7,62 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Apl_Mvc_App.Models;
+using PagedList;
 
 namespace Apl_Mvc_App.Controllers
 {
     public class FileItemsController : Controller
     {
-        private AplDbEntities db = new AplDbEntities();
+        private AplDb_LocalEntities_ db = new AplDb_LocalEntities_();
 
         // GET: FileItems
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
-            return View(db.APLFileItems.ToList());
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.FileNameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewBag.CurrentFilter = searchString;
+
+            var fileItems = from s in db.APLFileItems
+                            select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                fileItems = fileItems.Where(s => s.FileName.Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    fileItems = fileItems.OrderByDescending(s => s.FileName);
+                    break;
+                case "Date":
+                    fileItems = fileItems.OrderBy(s => s.TimeStamp);
+                    break;
+                case "date_desc":
+                    fileItems = fileItems.OrderByDescending(s => s.TimeStamp);
+                    break;
+                default:
+                    fileItems = fileItems.OrderBy(s => s.FileName);
+                    break;
+            }
+
+
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            return View(fileItems.ToPagedList(pageNumber, pageSize));
+            //return View(fileItems.ToList());
+            // return View(db.APLFileItems.ToList());
         }
 
         // GET: FileItems/Details/5

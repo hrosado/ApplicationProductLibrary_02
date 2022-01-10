@@ -104,6 +104,26 @@
             <param name="options">Formatting options.</param>
             <returns>Outputs the "Go To Page:" form HTML.</returns>
         </member>
+        <member name="T:PagedList.Mvc.PagedListDisplayMode">
+            <summary>
+            A tri-state enum that controls the visibility of portions of the PagedList paging control.
+            </summary>
+        </member>
+        <member name="F:PagedList.Mvc.PagedListDisplayMode.Always">
+            <summary>
+            Always render.
+            </summary>
+        </member>
+        <member name="F:PagedList.Mvc.PagedListDisplayMode.Never">
+            <summary>
+            Never render.
+            </summary>
+        </member>
+        <member name="F:PagedList.Mvc.PagedListDisplayMode.IfNeeded">
+            <summary>
+            Only render when there is data that makes sense to show (context sensitive).
+            </summary>
+        </member>
         <member name="T:PagedList.Mvc.PagedListRenderOptions">
             <summary>
              Options for configuring the output of <see cref="T:PagedList.Mvc.HtmlHelper"/>.
@@ -114,29 +134,76 @@
              The default settings render all navigation links and no descriptive text.
             </summary>
         </member>
+        <member name="M:PagedList.Mvc.PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(PagedList.Mvc.PagedListRenderOptions,System.Web.Mvc.Ajax.AjaxOptions)">
+            <summary>
+            Enables ASP.NET MVC's unobtrusive AJAX feature. An XHR request will retrieve HTML from the clicked page and replace the innerHtml of the provided element ID.
+            </summary>
+            <param name="options">The preferred Html.PagedList(...) style options.</param>
+            <param name="ajaxOptions">The ajax options that will put into the link</param>
+            <returns>The PagedListRenderOptions value passed in, with unobtrusive AJAX attributes added to the page links.</returns>
+        </member>
+        <member name="M:PagedList.Mvc.PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(System.String)">
+            <summary>
+            Enables ASP.NET MVC's unobtrusive AJAX feature. An XHR request will retrieve HTML from the clicked page and replace the innerHtml of the provided element ID.
+            </summary>
+            <param name="id">The element ID ("my_id") of the element whose innerHtml should be replaced, if # is included at the start this will be removed.</param>
+            <returns>A default instance of PagedListRenderOptions value passed in, with unobtrusive AJAX attributes added to the page links.</returns>
+        </member>
+        <member name="M:PagedList.Mvc.PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(System.Web.Mvc.Ajax.AjaxOptions)">
+            <summary>
+            Enables ASP.NET MVC's unobtrusive AJAX feature. An XHR request will retrieve HTML from the clicked page and replace the innerHtml of the provided element ID.
+            </summary>
+            <param name="ajaxOptions">Ajax options that will be used to generate the unobstrusive tags on the link</param>
+            <returns>A default instance of PagedListRenderOptions value passed in, with unobtrusive AJAX attributes added to the page links.</returns>
+        </member>
+        <member name="P:PagedList.Mvc.PagedListRenderOptions.ContainerDivClasses">
+            <summary>
+             CSS Classes to append to the &lt;div&gt; element that wraps the paging control.
+            </summary>
+        </member>
+        <member name="P:PagedList.Mvc.PagedListRenderOptions.UlElementClasses">
+            <summary>
+             CSSClasses to append to the &lt;ul&gt; element in the paging control.
+            </summary>
+        </member>
+        <member name="P:PagedList.Mvc.PagedListRenderOptions.LiElementClasses">
+            <summary>
+             CSS Classes to append to every &lt;li&gt; element in the paging control.
+            </summary>
+        </member>
+        <member name="P:PagedList.Mvc.PagedListRenderOptions.ClassToApplyToFirstListItemInPager">
+            <summary>
+             Specifies a CSS class to append to the first list item in the pager. If null or whitespace is defined, no additional class is added to first list item in list.
+            </summary>
+        </member>
         <member name="P:PagedList.Mvc.PagedListRenderOptions.ClassToApplyToLastListItemInPager">
             <summary>
-             Specifies a class to append to the last list item in the pager. If null or whitespace is defined, no additional class is added to last list item in list.
+             Specifies a CSS class to append to the last list item in the pager. If null or whitespace is defined, no additional class is added to last list item in list.
+            </summary>
+        </member>
+        <member name="P:PagedList.Mvc.PagedListRenderOptions.Display">
+            <summary>
+            If set to Always, always renders the paging control. If set to IfNeeded, render the paging control when there is more than one page.
             </summary>
         </member>
         <member name="P:PagedList.Mvc.PagedListRenderOptions.DisplayLinkToFirstPage">
             <summary>
-             When true, includes a hyperlink to the first page of the list.
+             If set to Always, render a hyperlink to the first page in the list. If set to IfNeeded, render the hyperlink only when the first page isn't visible in the paging control.
             </summary>
         </member>
         <member name="P:PagedList.Mvc.PagedListRenderOptions.DisplayLinkToLastPage">
             <summary>
-             When true, includes a hyperlink to the last page of the list.
+             If set to Always, render a hyperlink to the last page in the list. If set to IfNeeded, render the hyperlink only when the last page isn't visible in the paging control.
             </summary>
         </member>
         <member name="P:PagedList.Mvc.PagedListRenderOptions.DisplayLinkToPreviousPage">
             <summary>
-             When true, includes a hyperlink to the previous page of the list.
+             If set to Always, render a hyperlink to the previous page of the list. If set to IfNeeded, render the hyperlink only when there is a previous page in the list.
             </summary>
         </member>
         <member name="P:PagedList.Mvc.PagedListRenderOptions.DisplayLinkToNextPage">
             <summary>
-             When true, includes a hyperlink to the next page of the list.
+             If set to Always, render a hyperlink to the next page of the list. If set to IfNeeded, render the hyperlink only when there is a next page in the list.
             </summary>
         </member>
         <member name="P:PagedList.Mvc.PagedListRenderOptions.DisplayLinkToIndividualPages">
@@ -249,7 +316,17 @@
             Text that will appear between each page number. If null or whitespace is specified, no delimiter will be shown.
             </summary>
         </member>
-        <member name="P:PagedList.Mvc.PagedListRenderOptions.DefaultPlusFirstAndLast">
+        <member name="P:PagedList.Mvc.PagedListRenderOptions.FunctionToTransformEachPageLink">
+            <summary>
+            An extension point which allows you to fully customize the anchor tags used for clickable pages, as well as navigation features such as Next, Last, etc.
+            </summary>
+        </member>
+        <member name="P:PagedList.Mvc.PagedListRenderOptions.Classic">
+            <summary>
+             Also includes links to First and Last pages.
+            </summary>
+        </member>
+        <member name="P:PagedList.Mvc.PagedListRenderOptions.ClassicPlusFirstAndLast">
             <summary>
              Also includes links to First and Last pages.
             </summary>
@@ -266,17 +343,27 @@
         </member>
         <member name="P:PagedList.Mvc.PagedListRenderOptions.MinimalWithItemCountText">
             <summary>
-             Shows Previous and Next links along with index of first and last items on page and total number of items across all pages.
+            	Shows Previous and Next links along with index of first and last items on page and total number of items across all pages.
             </summary>
         </member>
         <member name="P:PagedList.Mvc.PagedListRenderOptions.PageNumbersOnly">
             <summary>
-             Shows only links to each individual page.
+            	Shows only links to each individual page.
             </summary>
         </member>
         <member name="P:PagedList.Mvc.PagedListRenderOptions.OnlyShowFivePagesAtATime">
             <summary>
-             Shows Next and Previous while limiting to a max of 5 page numbers at a time.
+            	Shows Next and Previous while limiting to a max of 5 page numbers at a time.
+            </summary>
+        </member>
+        <member name="P:PagedList.Mvc.PagedListRenderOptions.TwitterBootstrapPager">
+            <summary>
+             Twitter Bootstrap 2's basic pager format (just Previous and Next links).
+            </summary>
+        </member>
+        <member name="P:PagedList.Mvc.PagedListRenderOptions.TwitterBootstrapPagerAligned">
+            <summary>
+             Twitter Bootstrap 2's basic pager format (just Previous and Next links), with aligned links.
             </summary>
         </member>
     </members>
