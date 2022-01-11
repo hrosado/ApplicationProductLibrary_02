@@ -76,7 +76,6 @@ C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\Newtonsoft.Json.xml
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\Antlr3.Runtime.pdb
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.csproj.AssemblyReference.cache
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.csproj.CoreCompileInputs.cache
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.csproj.CopyComplete
 C:\Users\CW2_Rosado\Documents\Repos\ApplicationProductLibrary_02\Apl_Mvc_App\obj\Debug\Apl_Mvc_App.dll
