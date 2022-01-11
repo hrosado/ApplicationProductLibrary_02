@@ -175,6 +175,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Content Include="App_Data\AplDb.mdf" />
     <Content Include="App_Data\AplDb_Local.mdf" />
     <Content Include="App_Data\AplDb_Local_log.ldf">
@@ -182,6 +183,11 @@
     </Content>
     <Content Include="App_Data\AplDb_log.ldf">
       <DependentUpon>AplDb.mdf</DependentUpon>
+=======
+    <Content Include="App_Data\AplDb_01.mdf" />
+    <Content Include="App_Data\AplDb_01_log.ldf">
+      <DependentUpon>AplDb_01.mdf</DependentUpon>
+>>>>>>> Stashed changes
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
